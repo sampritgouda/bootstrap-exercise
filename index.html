@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jquery exercise 2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Bootstrap 5 Latest CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Bootstrap 5 Bundle JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+
+        <!-- ********************************
+         *         wrapper container        *
+         ************************************ -->
+         
+        <div id="wrapper" class="container resume-container py-3">
+
+        <!-- ********************************
+         *        resume section            *
+         ************************************ -->
+
+            <!-- header content -->
+            <div id="mypage-header" class="bg-secondary header-container rounded">
+                <header>
+                    <h1 id="resume-header" class="text-center">Samprit Gouda</h1>
+                </header>
+            </div>
+
+            
+            <!-- ********************************
+             *       middle main content        *
+             ************************************ -->
+            <div>
+            <div class="row mt-4 g-3">
+            <div class="col-sm-3 col-12 nav-tab-container rounded">
+
+              <!-- Nav Tabs -->
+            <ul class="nav nav-tabs flex-row flex-sm-column w-100" id="myTab" role="tablist">
+              <li class="nav-item flex-fill flex-sm-100" role="presentation">
+                <button class="nav-link w-100 active text-lg-start ps-lg-4" id="objective-tab" data-bs-toggle="tab" data-bs-target="#objective" type="button" role="tab"
+                data-toggle="tooltip" data-placement="top" title="Click here for Objective">
+                  <i class="fas fa-bullseye"></i> <span class="d-none d-lg-inline">Objective</span>
+                </button>
+              </li>
+              <li class="nav-item flex-fill flex-sm-100" role="presentation">
+                <button class="nav-link w-100 text-lg-start ps-lg-4" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab"
+                data-toggle="tooltip" data-placement="top" title="Click here for Education">
+                  <i class="fas fa-graduation-cap me-2"></i> <span class="d-none d-lg-inline">Education</span>
+                </button>
+              </li>
+              <li class="nav-item flex-fill flex-sm-100" role="presentation">
+                <button class="nav-link w-100 text-lg-start ps-lg-4" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab"
+                data-toggle="tooltip" data-placement="top" title="Click here for Skills">
+                  <i class="fas fa-lightbulb me-2"></i> <span class="d-none d-lg-inline">Skills</span>
+                </button>
+              </li>
+              <li class="nav-item flex-fill flex-sm-100" role="presentation">
+                <button class="nav-link w-100 text-lg-start ps-lg-4" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab"
+                data-toggle="tooltip" data-placement="top" title="Click here for Projects">
+                  <i class="fas fa-briefcase me-2"></i> <span class="d-none d-lg-inline">Projects</span>
+                </button>
+              </li>
+              <li class="nav-item flex-fill flex-sm-100" role="presentation">
+                <button class="nav-link w-100 text-lg-start ps-lg-4" id="references-tab" data-bs-toggle="tab" data-bs-target="#references" type="button" role="tab"
+                data-toggle="tooltip" data-placement="top" title="Click here for References">
+                  <i class="fas fa-user-friends me-2"></i> <span class="d-none d-lg-inline">References</span>
+                </button>
+              </li>
+            </ul>
+
+
+            </div>
+            <div class="col-sm-9 col-12 rounded">
+              <!-- Tab Content -->
+               <div class="main-tab-content  d-flex align-items-center rounded">
+              <div class="tab-content p-3" id="myTabContent">
+            
+                <!-- Objective -->
+                <div class="tab-pane fade show active" id="objective" role="tabpanel">
+                  <p>
+                    Enthusiastic full stack developer with expertise in front end HTML, CSS, JAVASCRIPT and back-end
+                    technologies , Skilled in MySQL database management and passionate about building scalable applications.
+                    Strong problem solving and teamwork abilities , Committed to continuous learning and maintaining a growth mindset.
+                  </p>
+                </div>
+            
+                <!-- Education -->
+                <div class="tab-pane fade" id="education" role="tabpanel">
+                  <ul>
+                    <li class="mt-3">B.C.A.(CS) – Govt First Grade College, Honnavar (80.39%)</li>
+                    <li class="mt-3">P.U.C.– Mohan K Shetty Govt College, Honnavar (85.67%)</li>
+                    <li class="mt-3">S.S.L.C. – Janata Vidyalaya, Kasarkod | (90.04%)</li>
+                  </ul>
+                </div>
+            
+                <!-- Skills -->
+                <div class="tab-pane fade" id="skills" role="tabpanel">
+                  <ul class="row">
+                    <li class="col-md-4 col-6">HTML</li>
+                    <li class="col-md-4 col-6">CSS</li>
+                    <li class="col-md-4 col-6">JAVASCRIPT</li>
+                    <li class="col-md-4 col-6">JAVA</li>
+                    <li class="col-md-4 col-6">MYSQL</li>
+                    <li class="col-md-4 col-6">REACT</li>
+                    <li class="col-md-4 col-6">SPRING BOOT</li>
+                    <li class="col-md-4 col-6">HIBERNATE</li>
+                    <li class="col-md-4 col-6">BOOTSTRAP</li>
+                  </ul>
+                </div>
+            
+                <!-- Projects -->
+                <div class="tab-pane fade" id="projects" role="tabpanel">
+                  <ul class="">
+                    <li class="mb-3">
+                      <h5 class="project-header">INSTAGRAM CLONE</h5>
+                      <p class="project-description">A Full-Stack Instagram Style social app with posts,reels and stories features</p>
+                      <a class="project-link" href="https://github.com/sampritgouda/Instagram_clone_react">Project Link</a>
+                    </li>
+                    <li class="mb-3">
+                      <h5 class="project-header">FLIPKART CLONE</h5>
+                      <p class="project-description">A Full-Stack Flipkart clone built with Spring Boot and thymeleaf</p>
+                      <a class="project-link" href="https://github.com/sampritgouda/Flipcart_clone">Project Link</a>
+                    </li>
+                    <li class="mb-3">
+                      <h5 class="project-header">FOOD APP</h5>
+                      <p class="project-description">The Food Delivery App is a web-based platform built with JSP and servlets </p>
+                      <a class="project-link" href="https://github.com/sampritgouda/Food_App">Project Link</a>
+                    </li>
+                  </ul>
+                </div>
+            
+                <!-- References -->
+                <div class="tab-pane fade" id="references" role="tabpanel">
+                  <p>
+                    Seashore Enterprises 187 Clive Road, House Springs, Missouri 63940 (636) 423-2759<br>
+                    Ryan was my direct manager from March 2018 until March 2020
+                  </p>
+                </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+            <!-- *************************************
+            *                Foter Section           *
+            ****************************************** -->
+             <div id="mypage-footer" class="py-3 bg-secondary cursor-pointer mt-3 rounded mypage-footer-content-container">
+                <footer class="mypage-footer-content">
+                    <div class="w-100">
+                        <div id="footer-head" class="text-center mb-2">Contact Info</div>
+                        <div class="footer-main-content m-auto">
+                            <div class="mb-2">
+                              <span class="text-black">Email :</span>
+                              <span class="pb-2 ms-2">goudasamprit@gmail.com</span>
+                            </div>
+                            <div>
+                              <span class="text-black">Phone :</span>
+                              <span id="resume-mobile-number" class="ms-2">7019796752</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- *************************************
+                *               Custom alert             *
+                ****************************************** -->
+
+                  <!-- Bootstrap Alert -->
+                <div id="alert-overlay" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-none">
+                  <!-- Alert Box -->
+                  <div id="card-alert" class="alert alert-success alert-dismissible fade show m-auto py-3 px-5" 
+                      role="alert" >
+                    <div class="flex-column justify-content-center align-items-between">
+                      <span class="text-nowrap animation-text">Animation Completed!</span>
+                      <div class="d-flex justify-content-center mt-3 gap-3">
+                        <button type="button" id="card-ok" class="btn btn-sm btn-success px-3">OK</button>
+                        <button type="button" id="card-cancel" class="btn btn-sm btn-secondary px-3">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div> 
+
+
+            <!-- *************************************
+            *      finding maxium number section     *
+            ****************************************** -->
+            <div class="row js-container">
+                <div class="col-lg-5 col-11 js-form-container m-auto p-3 rounded">
+
+                    <!-- card header -->
+                    <h1 class="section-header text-center">Find Max Number</h1>
+
+                    <div>
+                        <form class="form-container" id="max-form" name="max-form">
+                            <div class="form-content mb-4">
+                                <label for="number1" class="form-label">First Number<span class="require">*</span></label>
+                                <input type="number"  placeholder="Enter First Number" id="number1" class="form-control"/>
+                            </div>
+                            <div class="form-content mb-4">
+                                <label for="number2" class="form-label ">Second Number<span class="require">*</span></label>
+                                <input type="number"  placeholder="Enter Second Number" id="number2" class="form-control"/>
+                            </div>
+                            <div class="form-content mb-4">
+                                <button type="submit" class="submit-button btn btn-secondary w-100">Find maximum</button>
+                            </div>
+                        </form>
+                        <div id="max-output" class="output text-center" ></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *            Reversing the String        *
+            ****************************************** -->
+            <div class="row js-container">
+                <div class="js-form-container col-lg-5 col-11 p-3 rounded m-auto">
+
+                    <!-- card header -->
+                    <h1 class="section-header text-center">Reverse String</h1>
+                    <div>
+                        <form id="reverse-word-form" name="reverse-word-form" class="form-container">
+                            <div class="form-content mb-4">
+                                <label for="input-string" class="form-label ">Enter String<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter String" id="input-string" class="form-control"/>
+                            </div>
+    
+                            <div class="form-content mb-4">
+                                <button type="submit" class="btn w-100 btn-secondary">Reverse</button>
+                            </div>
+                        </form>
+                        <div id="reverse-output" class="output text-center"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *          finding Longest Word          *
+            ****************************************** -->
+            <div class="row js-container">
+                <div class="js-form-container col-lg-5 col-11 p-3 rounded m-auto">
+
+                    <!-- card header -->
+                    <h1 class="section-header text-center">Find Longest Word</h1>
+                  <div>
+                    <form id="longest-word-form" name="longest-word-form" class="form-container">
+                      <div class="form-content mb-4">
+                        <label for="words-array" class="form-label">Enter Words<span class="require">*</span></label>
+                        <input type="text" 
+                              placeholder="Enter Comma Separated Words" 
+                              id="words-array" 
+                              class="form-control" 
+                              list="words-list" 
+                        />
+                        <datalist id="words-list">
+                          <option value="Apple">
+                          <option value="Banana">
+                          <option value="Cherry">
+                          <option value="Date">
+                          <option value="Elderberry">
+                          <option value="Fig">
+                          <option value="Grapes">
+                        </datalist>
+                      </div>
+
+                      <div class="form-content mb-4">
+                        <button type="submit" class="btn btn-secondary w-100">Find Longest</button>
+                      </div>
+                    </form>
+                    <div id="longest-output" class="output text-center"></div>
+                  </div>
+
+                </div>
+            </div>
+
+
+            <!-- *************************************
+            *              Create Resume             *
+            ****************************************** -->
+            <div class="row js-container">
+                <div class="col-lg-5 col-11 js-form-container p-3 rounded m-auto">
+
+                    <!-- card header -->
+                    <h1 class="section-header text-center">Resume Maker</h1>
+                    <div>
+                        <form id="cookie-form" name="cookie-form" class="form-container">
+                            <div class="form-content mb-4">
+                                <label for="user-name" class="form-label ">Enter name<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter Your Name" id="user-name" class="form-control"/>
+                            </div>
+                            <div class="form-content mb-4">
+                                <label for="user-mobile-number" class="form-label ">Enter Mobile Number<span class="require">*</span></label>
+                                <input type="text"  placeholder="Enter Mobile Number" id="user-mobile-number" class="form-control" maxlength="10"/>
+                            </div>
+    
+                            <div class="form-content mb-4">
+                                <button type="submit" class="btn btn-secondary w-100">Create Resume</button>
+                            </div>
+                        </form>
+                        <div id="resume-create-output" class="output text-center"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
