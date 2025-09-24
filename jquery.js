@@ -16,22 +16,19 @@ $(document).ready(()=>{
   /****************************************
    * adding slide down animation to footer*
    ****************************************/
-    $("#mypage-footer").on("mouseenter", ()=> {
-    $(".mypage-footer-content").stop(true, true).slideDown(2000, ()=> {
-      $("#alert-overlay").removeClass("d-none").fadeIn(200); 
-    })
-  })
+  var alertModal = new bootstrap.Modal(document.getElementById('alert-overlay'));
 
-  //after clicking on ok hide alert card
-  $("#card-ok, #card-cancel").on("click", () => {
-  $("#alert-overlay").addClass("d-none").fadeIn(200);
+  // Slide down footer and show modal after animation
+  $("#mypage-footer").on("mouseenter", () => {
+      $(".mypage-footer-content").stop(true, true).slideDown(2000, () => {
+          alertModal.show();
+      });
   });
 
-   /****************************************
-   * adding slide up animation to footer   *
-   *****************************************/
-  $("#mypage-footer").on("mouseleave",()=>{
-    $(".mypage-footer-content").stop(true).slideUp(1000);
-  })
+  // Slide up footer on mouse leave
+  $("#mypage-footer").on("mouseleave", () => {
+      $(".mypage-footer-content").stop(true).slideUp(1000);
+  });
+
 
 })
