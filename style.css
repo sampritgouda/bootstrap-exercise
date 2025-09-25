@@ -7,16 +7,12 @@
 }
 .resume-container .header-shrink{
     height: 10px;
-    padding: 0 !important;
+    padding: 0 ;
     overflow: hidden;
 }
 .resume-container #resume-header{
     color: #ffffff;
     font-weight: 700;
-}
-/* Remove default tab border */
-.resume-container.nav-tabs .nav-link {
-  border: none !important;
 }
 
 /* Custom style for active tab */
@@ -66,10 +62,7 @@
     transform: translate(-50%);
     width: auto;
 }
-.resume-container .row {
-  margin-left: 0;
-  margin-right: 0;
-}
+
 .resume-container .tab-pane .project-link{
     font-size: 15px;
     text-decoration: none;

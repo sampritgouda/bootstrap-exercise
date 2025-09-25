@@ -20,7 +20,7 @@ $(document).ready(()=>{
 
   // Slide down footer and show modal after animation
   $("#mypage-footer").on("mouseenter", () => {
-      $(".mypage-footer-content").stop(true, true).slideDown(2000, () => {
+      $(".mypage-footer-content").stop(true, true).slideDown(10000, () => {
           alertModal.show();
       });
   });
