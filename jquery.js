@@ -30,5 +30,4 @@ $(document).ready(()=>{
       $(".mypage-footer-content").stop(true).slideUp(1000);
   });
 
-
 })

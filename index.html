@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>jquery exercise 2</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
         <!-- Bootstrap 5 Latest CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -48,7 +49,7 @@
              ************************************ -->
             <div>
               <div class="row mt-4 g-3 m-0 p-0">
-                <div class="col-sm-3 col-12 nav-tab-container rounded">
+                <div class="col-sm-3 col-12 nav-tab-container rounded p-0">
 
                   <!-- Nav Tabs -->
                   <ul class="nav nav-tabs flex-row flex-sm-column w-100" id="myTab" role="tablist">
@@ -59,25 +60,25 @@
                       </button>
                     </li>
                     <li class="nav-item flex-fill flex-sm-100" role="presentation">
-                      <button class="nav-link w-100 text-lg-start ps-lg-4" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab"
+                      <button class="nav-link w-100 text-lg-start ps-lg-4 " id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab"
                       data-toggle="tooltip" data-placement="top" title="Click here for Education">
                         <i class="fas fa-graduation-cap me-2"></i> <span class="d-none d-lg-inline">Education</span>
                       </button>
                     </li>
                     <li class="nav-item flex-fill flex-sm-100" role="presentation">
-                      <button class="nav-link w-100 text-lg-start ps-lg-4" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab"
+                      <button class="nav-link w-100 text-lg-start ps-lg-4 " id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab"
                       data-toggle="tooltip" data-placement="top" title="Click here for Skills">
                         <i class="fas fa-lightbulb me-2"></i> <span class="d-none d-lg-inline">Skills</span>
                       </button>
                     </li>
                     <li class="nav-item flex-fill flex-sm-100" role="presentation">
-                      <button class="nav-link w-100 text-lg-start ps-lg-4" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab"
+                      <button class="nav-link w-100 text-lg-start ps-lg-4 " id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab"
                       data-toggle="tooltip" data-placement="top" title="Click here for Projects">
                         <i class="fas fa-briefcase me-2"></i> <span class="d-none d-lg-inline">Projects</span>
                       </button>
                     </li>
                     <li class="nav-item flex-fill flex-sm-100" role="presentation">
-                      <button class="nav-link w-100 text-lg-start ps-lg-4" id="references-tab" data-bs-toggle="tab" data-bs-target="#references" type="button" role="tab"
+                      <button class="nav-link w-100 text-lg-start ps-lg-4 " id="references-tab" data-bs-toggle="tab" data-bs-target="#references" type="button" role="tab"
                       data-toggle="tooltip" data-placement="top" title="Click here for References">
                         <i class="fas fa-user-friends me-2"></i> <span class="d-none d-lg-inline">References</span>
                       </button>
@@ -261,42 +262,23 @@
             <!-- *************************************
             *          finding Longest Word          *
             ****************************************** -->
+
             <div class="row js-container">
-                <div class="js-form-container col-lg-5 col-11 p-3 rounded m-auto">
-
-                    <!-- card header -->
-                    <h1 class="section-header text-center">Find Longest Word</h1>
-                  <div>
-                    <form id="longest-word-form" name="longest-word-form" class="form-container">
-                      <div class="form-content mb-4">
-                        <label for="words-array" class="form-label">Enter Words<span class="require">*</span></label>
-                        <input type="text" 
-                              placeholder="Enter Comma Separated Words" 
-                              id="words-array" 
-                              class="form-control" 
-                              list="words-list" 
-                        />
-                        <datalist id="words-list">
-                          <option value="Apple">
-                          <option value="Banana">
-                          <option value="Cherry">
-                          <option value="Date">
-                          <option value="Elderberry">
-                          <option value="Fig">
-                          <option value="Grapes">
-                        </datalist>
-                      </div>
-
-                      <div class="form-content mb-4">
-                        <button type="submit" class="btn btn-secondary w-100">Find Longest</button>
-                      </div>
-                    </form>
-                    <div id="longest-output" class="output text-center"></div>
+              <div class="js-form-container col-lg-5 col-11 p-3 rounded m-auto">
+                <h1 class="section-header text-center">Find Longest Word</h1>
+                <form id="longest-word-form" class="form-container">
+                  <div class="form-content mb-4">
+                    <label for="words-array" class="form-label">Enter Words<span class="require">*</span></label>
+                    <input type="text" id="words-array" class="form-control" placeholder="Enter Comma Separated Words">
                   </div>
+                  <div class="form-content mb-4">
+                    <button type="submit" class="btn btn-secondary w-100">Find Longest</button>
+                  </div>
+                </form>
+                <div id="longest-output" class="output text-center"></div>
 
-                </div>
+              </div>
             </div>
-
 
             <!-- *************************************
             *              Create Resume             *

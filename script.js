@@ -320,3 +320,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+$(function() {
+  var words = ["Apple","Banana","Cherry","Date","Elderberry","Fig","Grapes"];
+
+  // split input by comma
+  function split(val) {
+    return val.split(/,\s*/);
+  }
+
+  // get last word
+  function extractLast(term) {
+    return split(term).pop();
+  }
+
+  $("#words-array")
+    .on("keydown", function(event) {
+      if (event.keyCode === $.ui.keyCode.TAB &&
+          $(this).autocomplete("instance").menu.active) {
+        event.preventDefault();
+      }
+    })
+    .autocomplete({
+      minLength: 0, // show suggestions even on empty
+      source: function(request, response) {
+        var term = extractLast(request.term).toLowerCase();
+        if (!term) {
+          response(words); // show all if last word is empty
+          return;
+        }
+        var matches = $.grep(words, function(word){
+          return word.toLowerCase().indexOf(term) === 0;
+        });
+        response(matches);
+      },
+      focus: function() {
+        return false; // prevent value insertion on focus
+      },
+      select: function(event, ui) {
+        var terms = split(this.value);
+        terms.pop();               // remove last word being typed
+        terms.push(ui.item.value); // add selected word
+        terms.push("");            // add comma for next word
+        this.value = terms.join(", ");
+        return false;
+      }
+    })
+    .focus(function() {
+      $(this).autocomplete("search", ""); // show all suggestions on focus
+    });
+});

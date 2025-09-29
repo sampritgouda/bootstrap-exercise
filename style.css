@@ -31,6 +31,7 @@
     height: 70px;
     font-size: 17px;
     font-weight: 600;
+    border: 2px solid #ffcc80;
 }
 .resume-container .nav-tab-container{
     background-color: #ffe0b2;
@@ -102,4 +103,24 @@
 .resume-container .mypage-footer-content-container .animation-text{
     font-size: 17px;
     font-weight: 600;
+}
+
+.ui-autocomplete {
+    width: 200px;
+  background-color: #fff;      
+  border: 1px solid #ced4da; 
+  border-radius: 0.25rem;       
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1050 !important;     /* make sure it's above other elements */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
+}
+
+.ui-menu-item-wrapper {
+  padding: 0.25rem 0.75rem;     /* Bootstrap dropdown padding */
+  cursor: pointer;
+}
+
+.ui-state-focus {
+  background-color: #e9ecef !important; /* Bootstrap hover color */
 }
